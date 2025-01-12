@@ -11,13 +11,14 @@ function App() {
 
   return (
     <div>
-      <Counter
-        text={"Step"}
-        num={step}
-        increaseBy={1}
-        onIncrease={() => setStep(step + 1)}
-        onDecrease={() => setStep(step - 1)}
+      <input
+        type="range"
+        min="0"
+        max="10"
+        value={step}
+        onChange={(event) => { setStep(Number(event.target.value)); }}
       />
+      <h3>Step: {step}</h3>
       <Counter
         text={"Count"}
         num={dayInterval}
