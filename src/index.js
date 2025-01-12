@@ -27,6 +27,15 @@ function App() {
         onDecrease={() => setDayInterval(dayInterval - step)}
       />
       The date {dayInterval} days from today is {date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+      <br />
+      <button
+        name="reset"
+        onClick={() => {
+          setStep(0);
+          setDayInterval(0);
+        }}>
+        Reset
+      </button>
     </div>
   );
 }
